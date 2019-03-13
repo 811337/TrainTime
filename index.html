@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Train Time | Jesse Chen</title>
+    <title>Train Schedule | Jesse Chen</title>
 
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -16,16 +16,19 @@
 
 <body class="container">
 
-    <header>
+    <header class="jumbotron">
+        <h1 class="text-center title">THOMAS</h1>
+        <h3 class="text-center title">&amp; FRIENDS</h3>
     </header>
 
     <table class="table">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Train Name</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Frequency (min)</th>
+                <th scope="col">Next Arrival</th>
+                <th scope="col">Minutes Away</th>
             </tr>
 
         </thead>
@@ -36,12 +39,14 @@
                 <td>Mark</td>
                 <td>Otto</td>
                 <td>@mdo</td>
+                <td>@fat</td>
             </tr>
 
             <tr>
                 <th scope="row">2</th>
                 <td>Jacob</td>
                 <td>Thornton</td>
+                <td>@fat</td>
                 <td>@fat</td>
             </tr>
 
@@ -50,27 +55,35 @@
                 <td>Larry</td>
                 <td>the Bird</td>
                 <td>@twitter</td>
+                <td>@fat</td>
             </tr>
 
         </tbody>
-
+    
     </table>
 
-    <form>
+    <h2 class="form">Add Train</h2>
+
+    <form class="form">
+
         <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <label>Train Name</label>
+            <input type="text" class="form-control">
         </div>
 
         <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <label>Destination</label>
+            <input type="text" class="form-control">
         </div>
 
-        <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        <div class="form-group">
+            <label>First Train Time (hh:mm - military time)</label>
+            <input class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label>Frequency (min)</label>
+            <input class="form-control">
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
