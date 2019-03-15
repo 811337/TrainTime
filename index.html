@@ -21,7 +21,12 @@
         <h3 class="text-center title">&amp; FRIENDS</h3>
     </header>
 
+    <div>
+        <h1 class="text-center" id="currentTime"></h1>
+    </div>
+
     <table class="table">
+
         <thead class="thead-dark">
             <tr>
                 <th scope="col">Train Name</th>
@@ -33,31 +38,8 @@
 
         </thead>
 
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@fat</td>
-            </tr>
-
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>@fat</td>
-            </tr>
-
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                <td>@fat</td>
-            </tr>
-
+        <tbody id="table-rows">
+            <!--Train Info appends here-->
         </tbody>
     
     </table>
@@ -68,36 +50,38 @@
 
         <div class="form-group">
             <label>Train Name</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" id="train-name">
         </div>
 
         <div class="form-group">
             <label>Destination</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" id="destination">
         </div>
 
         <div class="form-group">
             <label>First Train Time (hh:mm - military time)</label>
-            <input class="form-control">
+            <input type="text" class="form-control" id="first-train">
         </div>
 
         <div class="form-group">
             <label>Frequency (min)</label>
-            <input class="form-control">
+            <input type="number" class="form-control" id="frequency">
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+
     </form>
 
-    <footer>
-    </footer>
-
-    <script src="javascript/app.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
+
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="javascript/app.js"></script>
+
 </body>
 
 </html>
